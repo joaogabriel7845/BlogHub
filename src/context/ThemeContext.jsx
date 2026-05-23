@@ -1,0 +1,23 @@
+import { createContext, useState } from "react";
+
+export const ThemeContext = createContext();
+
+export function ThemeProvider({ children }) {
+  const [isDark, setIsDark] = useState(false);
+
+  const theme = {
+    bg: isDark ? "bg-[#252524]" : "bg-white",
+    bgHeader: isDark ? "bg-[#1F1F1E]" : "bg-[#597864]",
+    borderHeader: isDark ? "border-b border-white/10" : "border-0",
+    filterBgHover: isDark ? "hover:bg-[#3a3a39]" : "hover:bg-gray-200",
+    filterBgActive: isDark ? "bg-gray-200" : "bg-slate-800",
+    text: isDark ? "text-white" : "text-black",
+    border: isDark ? "border-white/10" : "border-black/10",
+  };
+
+  return (
+    <ThemeContext.Provider value={{ isDark, setIsDark, theme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+}
