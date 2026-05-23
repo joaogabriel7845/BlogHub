@@ -1,16 +1,67 @@
-# React + Vite
+# BlogHub 📝
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um blog simples construído com React para consolidar os principais conceitos do ecossistema front-end moderno.
 
-Currently, two official plugins are available:
+## 🚀 Sobre o projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+O BlogHub é um projeto de aprendizado desenvolvido do zero com Vite e Tailwind CSS. O objetivo foi praticar os fundamentos do React de forma aplicada, construindo uma interface real com funcionalidades reais.
 
-## React Compiler
+## ✨ Funcionalidades
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Lista de posts** com título, imagem e descrição
+- **Tema claro/escuro** com alternância via botão
+- **Filtro por categoria** com feedback visual do filtro ativo
+- **Carregamento simulado** com spinner de loading
+- **Layout responsivo** com grid adaptável a qualquer tamanho de tela
 
-## Expanding the ESLint configuration
+## 🧠 Conceitos praticados
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### React
+- `useState` — gerenciamento de estado local (posts, tema, categoria ativa, loading)
+- `useEffect` — simulação de carregamento assíncrono de dados
+- `useContext` — estado global compartilhado entre componentes sem prop drilling
+- `.map()` — renderização dinâmica de listas de componentes
+- `.filter()` — filtragem de posts por categoria
+- Props — comunicação entre componentes pai e filho
+- Desestruturação de props e estados
+
+### Arquitetura
+- Separação de responsabilidades entre componentes
+- Context API para compartilhar tema entre toda a aplicação
+- Componentes reutilizáveis (`PostCard`, `FiltroCategoria`, `Header`)
+
+### Estilização
+- Tailwind CSS com classes utilitárias
+- Grid responsivo com `auto-fill` e `minmax`
+- Tema dinâmico via objeto de classes no contexto
+- Transições e hover states
+
+## 🗂️ Estrutura de pastas
+
+```
+src/
+  components/
+    Header.jsx
+    PostCard.jsx
+    FiltroCategoria.jsx
+  context/
+    ThemeContext.jsx
+  App.jsx
+  main.jsx
+```
+
+## 🛠️ Tecnologias
+
+- [React](https://react.dev)
+- [Vite](https://vitejs.dev)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Lucide React](https://lucide.dev) — ícones
+- [React Spinners](https://www.davidhu.io/react-spinners) — loading
+- [Picsum Photos](https://picsum.photos) — imagens placeholder
+
+## ▶️ Como rodar
+
+```bash
+npm install
+npm run dev
+```
