@@ -20,12 +20,9 @@ function DetailPost() {
         className={`w-full flex flex-1 flex-col gap-5 p-10 border ${theme.borderDetailPost} shadow`}
       >
         <h1 className="font-[Lora] text-center text-3xl">{post.title}</h1>
-        <div className="flex gap-5">
+        <div className="flex flex-1 flex-wrap gap-5">
           <img
-            className="flex-1 object-cover rounded-md"
-            src={post.img}
-            alt=""
-          />
+            className="flex-1 object-cover rounded-md" src={post.img} alt=""/>
           <div
             className={`flex-1 flex flex-col gap-5 p-5 border ${theme.borderDetailPost}`}
           >
