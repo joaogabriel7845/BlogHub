@@ -6,7 +6,7 @@ function FiltroCategoria({ category, categoryActive, setCategoryActive }) {
 
   return (
     <button
-      className={`w-fit border ${category === categoryActive ? "border-green-500 font-medium" : theme.border} p-2.5 rounded-4xl ${theme.bg} ${theme.bgHover} transition-all cursor-pointer text-center ${theme.text} font-[Montserrat]`}
+      className={`w-fit shrink-0 border ${category === categoryActive ? "border-green-500 font-medium" : theme.border} p-2.5 rounded-4xl ${theme.bg} ${theme.bgHover} transition-all cursor-pointer text-center ${theme.text} font-[Montserrat]`}
       onClick={() => {
         setCategoryActive(category === categoryActive ? null : category);
       }}

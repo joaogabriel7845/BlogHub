@@ -327,13 +327,15 @@ function App() {
   return (
     <div className={`w-full min-h-screen ${theme.bg} box-border transition-all`}>
       <Header />
-      <div className="flex justify-center gap-5 pt-5">
-        {load && (
-          <div className="items-center">
-            <BarLoader size={10} />
-          </div>
-        )}
-        {category}
+      <div className="flex justify-center">
+        <div className="flex gap-5 pt-5 overflow-x-auto px-5">
+          {load && (
+            <div className="items-center">
+              <BarLoader size={10} />
+            </div>
+          )}
+          {category}
+        </div>
       </div>
       <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-5 p-5">
         {posts}
