@@ -12,6 +12,7 @@ export function ThemeProvider({ children }) {
     borderHeader: isDark ? "border-b border-white/10" : "border-0",
     filterBgActive: isDark ? "bg-gray-200" : "bg-slate-800",
     text: isDark ? "text-white" : "text-black",
+    divider: isDark ? "divide-white/20" : "divide-black/20",
     border: isDark ? "border-white/10" : "border-black/10",
     borderDetailPost: isDark ? "border-white/20" : "border-black/20",
   };
