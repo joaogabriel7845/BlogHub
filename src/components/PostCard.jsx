@@ -12,7 +12,7 @@ function PostCard({ post }) {
     >
       <h1 className="text-2xl">{post.title}</h1>
       <img src={post.img} alt="" />
-      <p className="font-light">Usuário: {post.description}</p>
+      <p className="font-light">{post.user}: {post.description}</p>
       <Link
         to={`/post/${post.id}`}
         state={{ post }}
