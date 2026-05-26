@@ -10,17 +10,17 @@ function DetailPost() {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <div className={`w-full min-h-screen p-10 flex flex-col gap-5 ${theme.bg} ${theme.text}`}>
+    <div className={`w-full min-h-screen p-5 md:p-10 flex flex-col gap-5 ${theme.bg} ${theme.text}`}>
 
       <Link className="w-fit" to={"/"}>
         <ArrowLeft />
       </Link>
 
-      <div className={`w-full flex flex-1 flex-col gap-5 p-10 border ${theme.borderDetailPost} shadow`}>
+      <div className={`w-full flex flex-1 flex-col gap-5 p-2 md:p-10 border-0 md:border ${theme.borderDetailPost}`}>
 
         <h1 className="font-[Lora] text-center text-3xl">{post.title}</h1>
 
-        <div className={`flex flex-1 flex-wrap gap-5 items-center border ${theme.borderDetailPost} p-5 `}>
+        <div className={`flex flex-1 flex-wrap gap-5 items-center md:border ${theme.borderDetailPost} p-1 md:p-5`}>
 
           <img className="flex-1 object-cover rounded-md" src={post.img} alt=""/>
 
