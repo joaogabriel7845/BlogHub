@@ -9,6 +9,7 @@ O BlogHub é um projeto de aprendizado desenvolvido do zero com Vite e Tailwind 
 ## ✨ Funcionalidades
 
 - **Lista de posts** com título, imagem e descrição
+- **Página de detalhes** de cada post com navegação entre páginas
 - **Tema claro/escuro** com alternância via botão
 - **Filtro por categoria** com feedback visual do filtro ativo
 - **Carregamento simulado** com spinner de loading
@@ -25,10 +26,18 @@ O BlogHub é um projeto de aprendizado desenvolvido do zero com Vite e Tailwind 
 - Props — comunicação entre componentes pai e filho
 - Desestruturação de props e estados
 
+### React Router
+- `BrowserRouter` — configuração de roteamento da aplicação
+- `Routes` e `Route` — definição de rotas declarativas
+- `Link` — navegação entre páginas sem recarregar
+- `useLocation` — acesso ao estado passado entre rotas
+- Passagem de dados entre páginas via `state`
+
 ### Arquitetura
 - Separação de responsabilidades entre componentes
 - Context API para compartilhar tema entre toda a aplicação
 - Componentes reutilizáveis (`PostCard`, `FiltroCategoria`, `Header`)
+- Pasta `pages/` para organização das páginas
 
 ### Estilização
 - Tailwind CSS com classes utilitárias
@@ -46,6 +55,8 @@ src/
     FiltroCategoria.jsx
   context/
     ThemeContext.jsx
+  pages/
+    DetailPost.jsx
   App.jsx
   main.jsx
 ```
@@ -55,6 +66,7 @@ src/
 - [React](https://react.dev)
 - [Vite](https://vitejs.dev)
 - [Tailwind CSS](https://tailwindcss.com)
+- [React Router DOM](https://reactrouter.com) — navegação entre páginas
 - [Lucide React](https://lucide.dev) — ícones
 - [React Spinners](https://www.davidhu.io/react-spinners) — loading
 - [Picsum Photos](https://picsum.photos) — imagens placeholder
